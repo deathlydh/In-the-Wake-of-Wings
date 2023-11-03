@@ -8,9 +8,9 @@ public class ColliderEnter : MonoBehaviour
     [SerializeField]
     private UnityEvent go;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             go.Invoke();
         }
