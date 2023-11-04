@@ -2378,6 +2378,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  sbor: {fileID: 0}
 --- !u!65 &902749058
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4670,6 +4671,7 @@ GameObject:
   - component: {fileID: 1992560372}
   - component: {fileID: 1992560371}
   - component: {fileID: 1992560376}
+  - component: {fileID: 1992560377}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -4797,6 +4799,37 @@ MonoBehaviour:
       Data3: 1703884194
       Data4: 2077673787
     Path: event:/Forest/Ambience
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1992560377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992560370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 2122734502
+      Data2: 1324369203
+      Data3: -1906891611
+      Data4: 2091049607
+    Path: event:/Scene_Music_0
   Event: 
   PlayEvent: 1
   StopEvent: 2
