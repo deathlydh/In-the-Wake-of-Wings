@@ -53,13 +53,13 @@ public class Player_Muvoment : MonoBehaviour
         dir *= Time.deltaTime;
         dir = transform.TransformDirection(dir);
         cc.Move(dir);
-        Debug.Log(horizontal);Debug.Log(vertical);
 
     }
     public void Func(float horizontal , float vertical)
     {
         if (horizontal != 0 || vertical != 0)
         {
+            shake.SetTrigger("Status");
             shake.enabled = true;
         }
         else
