@@ -3,7 +3,7 @@ using UnityEngine;
 public class Player_Muvoment : MonoBehaviour
 {
     private CharacterController cc;
-
+    public Animator shake;
     public float graviry = -9.8f;
     public float speed = 15.0f;
     public float sprint = 20;
@@ -47,12 +47,16 @@ public class Player_Muvoment : MonoBehaviour
             horizontal = Input.GetAxis("Horizontal") * speed;
             vertical = Input.GetAxis("Vertical") * speed;
         }
-
+        Func();
         jspeed += graviry * Time.deltaTime * 3f;
         Vector3 dir = new Vector3(horizontal, jspeed, vertical);
 
         dir *= Time.deltaTime;
         dir = transform.TransformDirection(dir);
         cc.Move(dir);
+    }
+    public void Func()
+    {
+        shake.SetTrigger("shake");
     }
 }
