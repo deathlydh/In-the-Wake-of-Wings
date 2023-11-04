@@ -10,7 +10,6 @@ public class Qwest_Ves1 : MonoBehaviour
         {
             Rigidbody rb = other.GetComponent<Rigidbody>();
             mass2 += rb.mass;
-            Debug.Log(mass2);
         }
     }
     private void OnTriggerExit(Collider other)
@@ -19,7 +18,6 @@ public class Qwest_Ves1 : MonoBehaviour
         {
             Rigidbody rb = other.GetComponent<Rigidbody>();
             mass2 -= rb.mass;
-            Debug.Log(mass2);
         }
     }
 }

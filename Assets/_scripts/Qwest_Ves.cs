@@ -30,7 +30,6 @@ public class Qwest_Ves : MonoBehaviour
     {
         if (mass1 == QV1.mass2 && QV1.mass2 == 3 && flag == false)
         {
-            Debug.Log("ivent");
             go.Invoke();
             flag = true;
         }
