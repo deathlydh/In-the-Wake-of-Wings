@@ -27,9 +27,12 @@ public class takeObject : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
-            object_.isKinematic = false;
-            object_ = null;
-            pr.enabled = true;
+            if (object_ != null)
+            {
+                object_.isKinematic = false;
+                object_ = null;
+                pr.enabled = true;
+            }
         }
     }
     public void prilip(Rigidbody obj)
