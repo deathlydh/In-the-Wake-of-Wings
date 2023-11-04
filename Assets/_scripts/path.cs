@@ -5,4 +5,5 @@ using UnityEngine;
 public class path : MonoBehaviour
 {
     public path NextPath;
+    public bool isStop;
 }

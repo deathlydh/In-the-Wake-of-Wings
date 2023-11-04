@@ -38,8 +38,19 @@ public class baturflyeAI : MonoBehaviour
         {
             if (distPath < 1)
             {
-                curPath = curPath.NextPath;
+                if (curPath.isStop)
+                {
+                    //Destroy(gameObject);
+                }
+                else
+                {
+                    curPath = curPath.NextPath;
+                }
             }
         }
+    }
+    public void LetsGoNextPath()
+    {
+        curPath.isStop = false;
     }
 }
