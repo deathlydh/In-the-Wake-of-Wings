@@ -56,24 +56,24 @@ public class Mause_Luck : MonoBehaviour
 
             transform.localEulerAngles = new Vector3(_rotationX, _rotationY, 0);
 
-            if (_animator != null)
-            {
-                if (!isMoving)
-                {
-                    if (_rotationX > 0)
-                    {
-                        _animator.SetFloat("Turn", 1);
-                    }
-                    else if (_rotationX < 0)
-                    {
-                        _animator.SetFloat("Turn", -1);
-                    }
-                    else
-                    {
-                        _animator.SetFloat("Turn", 0);
-                    }
-                }
-            }
+            //if (_animator != null)
+            //{
+            //    if (!isMoving)
+            //    {
+            //        if (_rotationX > 0)
+            //        {
+            //            _animator.SetFloat("Turn", 1);
+            //        }
+            //        else if (_rotationX < 0)
+            //        {
+            //            _animator.SetFloat("Turn", -1);
+            //        }
+            //        else
+            //        {
+            //            _animator.SetFloat("Turn", 0);
+            //        }
+            //    }
+            //}
         }
     }
 
