@@ -40,7 +40,6 @@ public class locks : MonoBehaviour
     }
     public void deleteLastChar()
     {
-        //curCode.Remove(curCode.Length);
         curCode = "";
         txt.text = curCode;
     }
@@ -50,7 +49,9 @@ public class locks : MonoBehaviour
         {
             if(curCode == code)
             {
-              open.Invoke();
+                curCode = "";
+                txt.text = curCode;
+                open.Invoke();
             }
             else
             {
