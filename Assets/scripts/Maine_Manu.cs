@@ -12,14 +12,7 @@ public class Maine_Manu : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-    public void load()
-    {
-        //ну мне бл что объйаснйать
-    }
-    public void Settings()
-    {
-        
-    }
+
     public void ExitGame()
     {
         Application.Quit();

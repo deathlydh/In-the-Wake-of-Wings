@@ -25,6 +25,7 @@ public class Mause_Luck : MonoBehaviour
         Rigidbody body = GetComponent<Rigidbody>();
         if (body != null)
             body.freezeRotation = true;
+
         _animator = GetComponent<Animator>();
         Cursor.lockState = CursorLockMode.Locked; 
     }
