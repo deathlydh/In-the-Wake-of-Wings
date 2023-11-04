@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using static Cinemachine.CinemachineTargetGroup;
 using static UnityEngine.GraphicsBuffer;
 
 public class baturflyeAI : MonoBehaviour
@@ -17,11 +19,12 @@ public class baturflyeAI : MonoBehaviour
     private Transform player;
     [SerializeField]
     private float speed;
+    [SerializeField]
     private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        anim =GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -42,9 +45,12 @@ public class baturflyeAI : MonoBehaviour
                 if (curPath.isStop)
                 {
                     //Destroy(gameObject);
+                    anim.SetBool("wait", true);
+                    //transform.Rotate(new Vector3(0, 45, 0) * Time.deltaTime);
                 }
                 else
                 {
+                    anim.SetBool("wait", false);
                     curPath = curPath.NextPath;
                 }
             }
