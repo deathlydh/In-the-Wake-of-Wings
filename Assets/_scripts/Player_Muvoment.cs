@@ -47,16 +47,18 @@ public class Player_Muvoment : MonoBehaviour
             horizontal = Input.GetAxis("Horizontal") * speed;
             vertical = Input.GetAxis("Vertical") * speed;
         }
-        Func();
+        Func(horizontal, vertical);
         jspeed += graviry * Time.deltaTime * 3f;
         Vector3 dir = new Vector3(horizontal, jspeed, vertical);
-
         dir *= Time.deltaTime;
         dir = transform.TransformDirection(dir);
         cc.Move(dir);
     }
-    public void Func()
+    public void Func(float horizontal , float vertical)
     {
-        shake.SetTrigger("shake");
+        if (horizontal != 0 || vertical != 0)
+        {
+            shake.SetTrigger("shake"); 
+        }
     }
 }
