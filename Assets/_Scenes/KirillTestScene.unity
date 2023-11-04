@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.033773154, g: 0.02802797, b: 0.017244238, a: 1}
+  m_IndirectSpecularColor: {r: 0.033988327, g: 0.02802058, b: 0.017336862, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4994,7 +4994,7 @@ MonoBehaviour:
       Data2: 1135205636
       Data3: 1703884194
       Data4: 2077673787
-    Path: event:/Forest/Ambience
+    Path: event:/Forest/Forest_Day
   Event: 
   PlayEvent: 1
   StopEvent: 2
@@ -5025,7 +5025,7 @@ MonoBehaviour:
       Data2: 1324369203
       Data3: -1906891611
       Data4: 2091049607
-    Path: event:/Scene_Music_0
+    Path: event:/Music/Scene_Music_0
   Event: 
   PlayEvent: 1
   StopEvent: 2
@@ -5867,6 +5867,14 @@ PrefabInstance:
     - target: {fileID: 1379944680098050851, guid: 4733acd7bb45b234dacfd963d37cb243, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3057887995714461678, guid: 4733acd7bb45b234dacfd963d37cb243, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3057887995714461678, guid: 4733acd7bb45b234dacfd963d37cb243, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4689234064598771891, guid: 4733acd7bb45b234dacfd963d37cb243, type: 3}
       propertyPath: camX
