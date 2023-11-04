@@ -60,6 +60,7 @@ public class Player_Muvoment : MonoBehaviour
     {
         if (horizontal != 0 || vertical != 0)
         {
+            shake.SetTrigger("Status");
             shake.enabled = true;
         }
         else
