@@ -10,6 +10,7 @@ public class Player_Muvoment : MonoBehaviour
     private bool statusSprint;
     private float jspeed = 0.0f;
     public float jumpForce = 15;
+    public bool CanMove = true;
     // Vector3 moveVelocity;
     private void Awake()
     {
@@ -47,12 +48,18 @@ public class Player_Muvoment : MonoBehaviour
             horizontal = Input.GetAxis("Horizontal") * speed;
             vertical = Input.GetAxis("Vertical") * speed;
         }
+        if (!CanMove)
+        {
+            horizontal = 0;
+            vertical = 0;
+        }
         Func(horizontal, vertical);
         jspeed += graviry * Time.deltaTime * 3f;
         Vector3 dir = new Vector3(horizontal, jspeed, vertical);
         dir *= Time.deltaTime;
         dir = transform.TransformDirection(dir);
         cc.Move(dir);
+        
 
     }
     public void Func(float horizontal , float vertical)
@@ -66,5 +73,9 @@ public class Player_Muvoment : MonoBehaviour
         {
             shake.enabled = false;
         }
+    }
+    public void setCanMove(bool CM)
+    {
+        CanMove = CM;
     }
 }

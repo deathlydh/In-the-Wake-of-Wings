@@ -33,7 +33,17 @@ public class GameMenue : MonoBehaviour
         Menue.SetActive(p_isOpen);
         camY.enabled = !p_isOpen;
         camX.enabled = !p_isOpen;
-        if (p_isOpen)
+        cursorEnabled(p_isOpen);
+
+
+    }
+   public void GoToScene()
+    {
+
+    }
+    public void cursorEnabled(bool isEnable)
+    {
+        if (isEnable)
         {
             Cursor.lockState = CursorLockMode.None;
         }
@@ -41,10 +51,5 @@ public class GameMenue : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
-        
-    }
-   public void GoToScene()
-    {
-
     }
 }
