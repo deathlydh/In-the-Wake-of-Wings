@@ -6,18 +6,17 @@ public class Qwest_Ves1 : MonoBehaviour
     public Qwest_Ves QV;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Stoun")
-        {
-            Rigidbody rb = other.GetComponent<Rigidbody>();
-            mass2 += rb.mass;
-        }
+
+         Rigidbody rb = other.GetComponent<Rigidbody>();
+         mass2 += rb.mass;
+
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Stoun")
-        {
-            Rigidbody rb = other.GetComponent<Rigidbody>();
-            mass2 -= rb.mass;
-        }
+
+
+        Rigidbody rb = other.GetComponent<Rigidbody>();
+        mass2 -= rb.mass;
+
     }
 }

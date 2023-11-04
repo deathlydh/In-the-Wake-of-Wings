@@ -981,6 +981,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  sbor: {fileID: 0}
 --- !u!1 &895957071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1560,6 +1561,10 @@ PrefabInstance:
     - target: {fileID: 7518125182948227723, guid: b20385bd8beafa243a9483d40306fa66, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8528977916184296619, guid: b20385bd8beafa243a9483d40306fa66, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
