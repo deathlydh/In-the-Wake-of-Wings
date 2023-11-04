@@ -23,16 +23,17 @@ public class GameMenue : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            IsOpenMenue = !IsOpenMenue;
-            OpenCloseMenue();
+            
+            OpenCloseMenue(IsOpenMenue);
         }
     }
-    private void OpenCloseMenue()
+    public void OpenCloseMenue(bool p_isOpen)
     {
-        Menue.SetActive(IsOpenMenue);
-        camY.enabled = !IsOpenMenue;
-        camX.enabled = !IsOpenMenue;
-        if (IsOpenMenue)
+        IsOpenMenue = !IsOpenMenue;
+        Menue.SetActive(p_isOpen);
+        camY.enabled = !p_isOpen;
+        camX.enabled = !p_isOpen;
+        if (p_isOpen)
         {
             Cursor.lockState = CursorLockMode.None;
         }
@@ -41,5 +42,9 @@ public class GameMenue : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
         }
         
+    }
+   public void GoToScene()
+    {
+
     }
 }
