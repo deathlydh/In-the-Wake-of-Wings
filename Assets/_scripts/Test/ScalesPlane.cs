@@ -19,7 +19,7 @@ public class ScalesPlane : MonoBehaviour
         if (other.TryGetComponent(out Rigidbody rb))
         {
              Debug.Log($"{gameObject.name} collision is has rb");
-            _bodyMass = rb.mass;
+            _bodyMass += rb.mass;
             BodyCollisionEnterEvent?.Invoke();
         }
     }

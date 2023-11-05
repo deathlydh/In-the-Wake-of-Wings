@@ -189,6 +189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: brigjeg
       objectReference: {fileID: 0}
+    - target: {fileID: 8013959490454482237, guid: 3ed510061f92f6344bfe60b762880b71, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 829e02317c9f355469a6735ed0f4d922, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -7029948723529949830, guid: 3ed510061f92f6344bfe60b762880b71, type: 3}
