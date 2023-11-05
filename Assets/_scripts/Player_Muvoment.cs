@@ -14,7 +14,7 @@ public class Player_Muvoment : MonoBehaviour
     private bool statusSprint;
     private float jspeed = 0.0f;
     
-    [SerializeField] private AudioGo AG;
+
 
     private void Awake()
     {
@@ -59,20 +59,13 @@ public class Player_Muvoment : MonoBehaviour
             horizontal = 0;
             vertical = 0;
         }
-        if (horizontal != 0 || vertical != 0)
-        {
-            AG.PlaySteps();
-         
 
-        }
         Func(horizontal, vertical);//anim
         jspeed += graviry * Time.deltaTime * 3f;
         Vector3 dir = new Vector3(horizontal, jspeed, vertical);
         dir *= Time.deltaTime;
         dir = transform.TransformDirection(dir);
         cc.Move(dir);
-        
-
     }
     public void Func(float horizontal , float vertical)
     {
