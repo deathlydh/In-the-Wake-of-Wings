@@ -5,43 +5,54 @@ using FMODUnity;
 
 public class AudioGo : MonoBehaviour
 {
-
-    private PARAMETER_DESCRIPTION ParametrDiscription;
-    private PARAMETER_ID poverhnostID;
-
-    private string str;
+    [SerializeField] private CharacterController _characterController;//
     [SerializeField] private EventReference _stepsEventReference;
+    [SerializeField] private EventReference _jumpEventReference;
+    
+    private string _surfaceMaterial;
 
-    public string texture => str;
-
+    private PARAMETER_DESCRIPTION _parametrDiscription;
+    private PARAMETER_ID _poverhnostID;
+    //private bool flag;
     private void Start()
     {
         const string nameParam = "Poverhnost";
-        RuntimeManager.StudioSystem.getParameterDescriptionByName(nameParam, out ParametrDiscription);
-        poverhnostID = ParametrDiscription.id;
+        RuntimeManager.StudioSystem.getParameterDescriptionByName(nameParam, out _parametrDiscription);
+        _poverhnostID = _parametrDiscription.id;
     }
 
     void Update()
     {
+        SetSurfaceMaterial();
+        if(_characterController.velocity.magnitude > 0.1 && _characterController.isGrounded)
+        {
+            PlaySteps();
+        }
+        
+
+    }
+
+    private void SetSurfaceMaterial()
+    {
         Ray ray = new Ray(transform.position, Vector3.down);
-        Debug.DrawRay(transform.position, -transform.up, Color.red );
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
+        Debug.DrawRay(transform.position, -transform.up, Color.red);
+    
+        if (Physics.Raycast(ray, out var hit))
         {
             Renderer render = hit.collider.GetComponent<Renderer>();
-            Terrain hitTerrain = hit.collider.GetComponent<Terrain>();//null
+            Terrain hitTerrain = hit.collider.GetComponent<Terrain>();
             if (hitTerrain)
             {
-                PlayFootstepSoundFromTerrain(hitTerrain, hit.point);
-                //RuntimeManager.StudioSystem.setParameterByIDWithLabel(poverhnostID, str);// передача
+                SetFootstepTerrainSurface(hitTerrain, hit.point);
             }
             else
             {
-                PlayFootMaterial(render);
+                PlayFootRendererSurface(render);
             }
         }
     }
-    private void PlayFootstepSoundFromTerrain(Terrain terrain, Vector3 HitPoint)
+
+    private void SetFootstepTerrainSurface(Terrain terrain, Vector3 HitPoint)
     {
         Vector3 terrainPosition = HitPoint - terrain.transform.position;
         Vector3 splatMapPosition = new Vector3(
@@ -61,21 +72,24 @@ public class AudioGo : MonoBehaviour
                 primeryIndex = i;
             }
         }
-        str = terrain.terrainData.terrainLayers[primeryIndex].name;
 
-    }
-    private void PlayFootMaterial(Renderer renderer)
-    {
-        str = renderer.material.GetTexture("_MainTex").name;
+        _surfaceMaterial = terrain.terrainData.terrainLayers[primeryIndex].name;
+        //Debug.Log($"Audio Go: surface texture is {_surfaceMaterial}");
+        RuntimeManager.StudioSystem.setParameterByIDWithLabel(_poverhnostID, _surfaceMaterial);
     }
 
-    internal void PlaySteps()
+    private void PlayFootRendererSurface(Renderer renderer)
     {
-        Debug.Log($"Audio Go: texture is {texture}");
-        RuntimeManager.StudioSystem.setParameterByIDWithLabel(poverhnostID, texture);
+        _surfaceMaterial = renderer.material.GetTexture("_MainTex").name;
+    }
+
+    private void PlaySteps()
+    {
         RuntimeManager.PlayOneShot(_stepsEventReference, gameObject.transform.position);
     }
-
-
+    public void PlayJump()
+    {
+        RuntimeManager.PlayOneShot(_jumpEventReference, gameObject.transform.position);
+    }
 }
 
