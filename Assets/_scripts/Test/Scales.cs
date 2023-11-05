@@ -7,7 +7,7 @@ public class Scales : MonoBehaviour
 {
     [SerializeField] private ScalesPlane _planeLeft;
     [SerializeField] private ScalesPlane _planeRigt;
-
+    public float equalityMass = 3;
     private void OnEnable()
     {
         _planeLeft.BodyCollisionEnterEvent += CheckEquals;
@@ -22,9 +22,9 @@ public class Scales : MonoBehaviour
 
     private void CheckEquals()
     {
-       if(_planeLeft.BodyMass == _planeRigt.BodyMass)
-        {
+       if(_planeLeft.BodyMass == _planeRigt.BodyMass && _planeRigt.BodyMass == equalityMass)
+       {
             Debug.Log("=)))");
-        }
+       }
     }
 }

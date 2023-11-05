@@ -27,10 +27,11 @@ public class ScalesPlane : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-       /* if (other.TryGetComponent(out Rigidbody rb))
+        if (other.TryGetComponent(out Rigidbody rb))
         {
-            _bodyMass = 0;
+            _bodyMass -= rb.mass;
             BodyCollisionExitEvent?.Invoke();
-        }*/
+            Debug.Log(_bodyMass);
+        }
     }
 }
