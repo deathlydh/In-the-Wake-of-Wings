@@ -4762,10 +4762,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 628058601}
   - {fileID: 185843477}
   - {fileID: 431241407}
   - {fileID: 1712764863}
-  - {fileID: 628058601}
   - {fileID: 1125502135}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -9209,6 +9209,8 @@ MonoBehaviour:
   redCube: {fileID: 431241406}
   blueCube: {fileID: 1712764862}
   greenCube: {fileID: 185843476}
+  YellowCube: {fileID: 628058600}
+  WhithCibe: {fileID: 1125502134}
 --- !u!1 &1651443672
 GameObject:
   m_ObjectHideFlags: 0
