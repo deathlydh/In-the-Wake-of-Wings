@@ -33,7 +33,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308564352672518505}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -41,6 +40,7 @@ Transform:
   m_Children:
   - {fileID: 8497968746543883674}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1079319002553667625
 MeshFilter:
@@ -133,7 +133,7 @@ MonoBehaviour:
   sprint: 20
   jumpForce: 15
   CanMove: 1
-  AG: {fileID: 1100981522732181085}
+  audioGo: {fileID: 1100981522732181085}
 --- !u!114 &7833695756968105483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,6 +258,13 @@ MonoBehaviour:
       Data3: 2024386214
       Data4: 155199376
     Path: event:/Player/Steps
+  _jumpEventReference:
+    Guid:
+      Data1: 712048057
+      Data2: 1336582132
+      Data3: 2024386214
+      Data4: 155199376
+    Path: event:/Player/Steps
 --- !u!1 &4912425862769306925
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,13 +288,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4912425862769306925}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8497968746543883674}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6462766612040435208
 GameObject:
@@ -319,7 +326,6 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6462766612040435208}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.6600001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -327,6 +333,7 @@ Transform:
   m_Children:
   - {fileID: 7901095573752241113}
   m_Father: {fileID: 7518125182948227723}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &539087331308542344
 Camera:
