@@ -40,10 +40,12 @@ public class Qwest_four : MonoBehaviour
             }
             else if (hitObject == blueCube)
             {
-                blueCube.SetActive(false);
-                greenCube.SetActive(true);
+                redCube.SetActive(false);
 
-                isBlueCubeHit = true;
+                //blueCube.SetActive(false);
+                greenCube.SetActive(true);
+                isRedCubeHit = true;
+                //isBlueCubeHit = true;
                 isGreenCubeHit = false;
 
             }
@@ -51,6 +53,11 @@ public class Qwest_four : MonoBehaviour
             {
                 greenCube.SetActive(false);
                 redCube.SetActive(false);
+                WhithCibe.SetActive(true);
+
+                //isGreenCubeHit = false;
+                //isBlueCubeHit = false;
+                isWhithCibeHit = false;
 
                 isGreenCubeHit = true;
                 isRedCubeHit = true;
@@ -59,21 +66,31 @@ public class Qwest_four : MonoBehaviour
             //hard
             else if (hitObject == YellowCube)
             {
+
                 greenCube.SetActive(false);
                 blueCube.SetActive(true);
                 YellowCube.SetActive(false);
+                //redCube.SetActive(true);
+                
+                //isRedCubeHit = false;
 
                 isGreenCubeHit = true;
                 isYellowCubeHit = true;
                 isBlueCubeHit = false;
-
+                if (isRedCubeHit && !isBlueCubeHit && isGreenCubeHit && isWhithCibeHit && isYellowCubeHit)
+                {
+                    blueCube.SetActive(false); 
+                    isBlueCubeHit = true;
+                }
 
             }
             else if (hitObject == WhithCibe)
             {
-                blueCube.SetActive(false);
                 WhithCibe.SetActive(false);
+                blueCube.SetActive(false);
+                YellowCube.SetActive(true);
 
+                isYellowCubeHit = false;
                 isBlueCubeHit = true;
                 isWhithCibeHit = true;
 
