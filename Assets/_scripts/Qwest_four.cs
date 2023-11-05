@@ -5,7 +5,10 @@ public class Qwest_four : MonoBehaviour
     public GameObject redCube;
     public GameObject blueCube;
     public GameObject greenCube;
-    private bool isRedCubeHit, isBlueCubeHit, isGreenCubeHit;
+    public GameObject YellowCube;
+    public GameObject WhithCibe;
+
+    private bool isRedCubeHit, isBlueCubeHit, isGreenCubeHit, isYellowCubeHit, isWhithCibeHit;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
@@ -24,31 +27,58 @@ public class Qwest_four : MonoBehaviour
 
             if (hitObject == redCube)
             {
-                blueCube.SetActive(false);
+                blueCube.SetActive(true);
                 greenCube.SetActive(true);
-                isBlueCubeHit = true;
+                YellowCube.SetActive(true);
+                WhithCibe.SetActive(true);
+
+                isYellowCubeHit = false;
+                isWhithCibeHit = false;
+                isBlueCubeHit = false;
                 isGreenCubeHit = false;
 
             }
             else if (hitObject == blueCube)
             {
-                greenCube.SetActive(false);
                 blueCube.SetActive(false);
+                greenCube.SetActive(true);
 
                 isBlueCubeHit = true;
-                isGreenCubeHit = true;
+                isGreenCubeHit = false;
 
             }
             else if (hitObject == greenCube)
             {
+                greenCube.SetActive(false);
                 redCube.SetActive(false);
-                blueCube.SetActive(true);
 
+                isGreenCubeHit = true;
                 isRedCubeHit = true;
-                isBlueCubeHit = false;
 
             }
-            if (isRedCubeHit && isBlueCubeHit && isGreenCubeHit)
+            //hard
+            else if (hitObject == YellowCube)
+            {
+                greenCube.SetActive(false);
+                blueCube.SetActive(true);
+                YellowCube.SetActive(false);
+
+                isGreenCubeHit = true;
+                isYellowCubeHit = true;
+                isBlueCubeHit = false;
+
+
+            }
+            else if (hitObject == WhithCibe)
+            {
+                blueCube.SetActive(false);
+                WhithCibe.SetActive(false);
+
+                isBlueCubeHit = true;
+                isWhithCibeHit = true;
+
+            }
+            if (isRedCubeHit && isBlueCubeHit && isGreenCubeHit && isWhithCibeHit && isYellowCubeHit)
             {
                 CallMethod();
             }
