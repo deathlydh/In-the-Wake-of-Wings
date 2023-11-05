@@ -9,6 +9,8 @@ public class ColliderEnter : MonoBehaviour
     private UnityEvent go;
     [SerializeField]
     private pipes sbor;
+    [SerializeField]
+    private UnityEvent valvecol;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,6 +21,11 @@ public class ColliderEnter : MonoBehaviour
         if(other.gameObject.tag == "truba")
         {
             sbor.addpipe(other.gameObject);
+        }
+        if(other.gameObject.tag == "valve")
+        {
+            Destroy(other.gameObject);
+            valvecol.Invoke();
         }
     }
 }
