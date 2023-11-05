@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -21,6 +22,10 @@ public class baturflyeAI : MonoBehaviour
     private float speed;
     [SerializeField]
     private Animator anim;
+    [SerializeField]
+    private EventReference waitEvent;
+    [SerializeField]
+    private EventReference goEvent;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +39,7 @@ public class baturflyeAI : MonoBehaviour
         distPath = Vector3.Distance(curPath.transform.position, transform.position);
         if (dist < distace & distPath > 1)
         {
-            anim.SetBool("wait", false);
+            //anim.SetBool("wait", false);
             transform.position += (curPath.transform.position - transform.position).normalized * speed * Time.deltaTime;
             transform.LookAt(curPath.transform.position, Vector3.up);
 
@@ -47,18 +52,21 @@ public class baturflyeAI : MonoBehaviour
                 {
                     //Destroy(gameObject);
                     anim.SetBool("wait", true);
+                    RuntimeManager.PlayOneShotAttached(waitEvent, this.gameObject);
+
                     //transform.Rotate(new Vector3(0, 45, 0) * Time.deltaTime);
                 }
                 else
                 {
                     anim.SetBool("wait", false);
+                    RuntimeManager.PlayOneShot(goEvent, this.gameObject.transform.position);
                     curPath = curPath.NextPath;
                 }
             }
-            if (dist > distace)
+           /* if (dist > distace)
             {
                 anim.SetBool("wait", true);
-            }
+            }*/
             
         }
     }
