@@ -34,6 +34,7 @@ public class baturflyeAI : MonoBehaviour
         distPath = Vector3.Distance(curPath.transform.position, transform.position);
         if (dist < distace & distPath > 1)
         {
+            anim.SetBool("wait", false);
             transform.position += (curPath.transform.position - transform.position).normalized * speed * Time.deltaTime;
             transform.LookAt(curPath.transform.position, Vector3.up);
 
@@ -54,6 +55,11 @@ public class baturflyeAI : MonoBehaviour
                     curPath = curPath.NextPath;
                 }
             }
+            if (dist > distace)
+            {
+                anim.SetBool("wait", true);
+            }
+            
         }
     }
     public void LetsGoNextPath()
