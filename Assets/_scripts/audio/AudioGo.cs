@@ -5,13 +5,15 @@ using FMODUnity;
 
 public class AudioGo : MonoBehaviour
 {
-    [SerializeField] private CharacterController _characterController;
+    [SerializeField] private CharacterController _characterController;//
     [SerializeField] private EventReference _stepsEventReference;
+    [SerializeField] private EventReference _jumpEventReference;
+    
     private string _surfaceMaterial;
 
     private PARAMETER_DESCRIPTION _parametrDiscription;
     private PARAMETER_ID _poverhnostID;
-
+    //private bool flag;
     private void Start()
     {
         const string nameParam = "Poverhnost";
@@ -26,6 +28,8 @@ public class AudioGo : MonoBehaviour
         {
             PlaySteps();
         }
+        
+
     }
 
     private void SetSurfaceMaterial()
@@ -70,7 +74,7 @@ public class AudioGo : MonoBehaviour
         }
 
         _surfaceMaterial = terrain.terrainData.terrainLayers[primeryIndex].name;
-        Debug.Log($"Audio Go: surface texture is {_surfaceMaterial}");
+        //Debug.Log($"Audio Go: surface texture is {_surfaceMaterial}");
         RuntimeManager.StudioSystem.setParameterByIDWithLabel(_poverhnostID, _surfaceMaterial);
     }
 
@@ -79,9 +83,13 @@ public class AudioGo : MonoBehaviour
         _surfaceMaterial = renderer.material.GetTexture("_MainTex").name;
     }
 
-    internal void PlaySteps()
+    private void PlaySteps()
     {
         RuntimeManager.PlayOneShot(_stepsEventReference, gameObject.transform.position);
+    }
+    public void PlayJump()
+    {
+        RuntimeManager.PlayOneShot(_jumpEventReference, gameObject.transform.position);
     }
 }
 

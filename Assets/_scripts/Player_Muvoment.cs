@@ -8,7 +8,7 @@ public class Player_Muvoment : MonoBehaviour
     public float sprint = 20;
     public float jumpForce = 15;
     public bool CanMove = true;
-
+    public AudioGo audioGo;
   
     private CharacterController cc;
     private bool statusSprint;
@@ -33,6 +33,7 @@ public class Player_Muvoment : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 jspeed = jumpForce;
+                audioGo.PlayJump();
             }
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))//ускорение
