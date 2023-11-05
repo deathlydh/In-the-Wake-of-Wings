@@ -2,26 +2,32 @@ using UnityEngine;
 
 public class Player_Muvoment : MonoBehaviour
 {
-    private CharacterController cc;
     public Animator shake;
     public float graviry = -9.8f;
     public float speed = 15.0f;
     public float sprint = 20;
-    private bool statusSprint;
-    private float jspeed = 0.0f;
     public float jumpForce = 15;
     public bool CanMove = true;
-    // Vector3 moveVelocity;
+
+  
+    private CharacterController cc;
+    private bool statusSprint;
+    private float jspeed = 0.0f;
+    
+    [SerializeField] private AudioGo AG;
+
     private void Awake()
     {
         cc = GetComponent<CharacterController>();
     }
 
+
+
     private void Update()
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        if (cc.isGrounded)
+        if (cc.isGrounded)///прижок
         {
             jspeed = 0;
             if (Input.GetKeyDown(KeyCode.Space))
@@ -29,7 +35,7 @@ public class Player_Muvoment : MonoBehaviour
                 jspeed = jumpForce;
             }
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift))//ускорение
         {
             statusSprint = true;
         }
@@ -48,12 +54,18 @@ public class Player_Muvoment : MonoBehaviour
             horizontal = Input.GetAxis("Horizontal") * speed;
             vertical = Input.GetAxis("Vertical") * speed;
         }
-        if (!CanMove)
+        if (!CanMove)//
         {
             horizontal = 0;
             vertical = 0;
         }
-        Func(horizontal, vertical);
+        if (horizontal != 0 || vertical != 0)
+        {
+            AG.PlaySteps();
+         
+
+        }
+        Func(horizontal, vertical);//anim
         jspeed += graviry * Time.deltaTime * 3f;
         Vector3 dir = new Vector3(horizontal, jspeed, vertical);
         dir *= Time.deltaTime;

@@ -10,6 +10,8 @@ public class pipes : MonoBehaviour
     private int count;
     [SerializeField]
     private podbor pr;
+    [SerializeField]
+    private GameObject[] pipe;
     void Start()
     {
         
@@ -22,6 +24,7 @@ public class pipes : MonoBehaviour
     }
     public void addpipe(GameObject gobj)
     {
+        pipe[CurCount].SetActive(true);
         CurCount++;
         Destroy(gobj);
         pr.enabled = true;
