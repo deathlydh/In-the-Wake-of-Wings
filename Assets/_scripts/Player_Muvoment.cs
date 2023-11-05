@@ -1,6 +1,5 @@
 using UnityEngine;
-using FMOD.Studio;
-using FMODUnity;
+
 public class Player_Muvoment : MonoBehaviour
 {
     public Animator shake;
@@ -10,8 +9,7 @@ public class Player_Muvoment : MonoBehaviour
     public float jumpForce = 15;
     public bool CanMove = true;
 
-    private PARAMETER_DESCRIPTION ParametrDiscription;
-    private PARAMETER_ID poverhnostID;
+  
     private CharacterController cc;
     private bool statusSprint;
     private float jspeed = 0.0f;
@@ -22,12 +20,9 @@ public class Player_Muvoment : MonoBehaviour
     {
         cc = GetComponent<CharacterController>();
     }
-    private void Start()
-    {
-        const string nameParam = "Poverhnost";
-        RuntimeManager.StudioSystem.getParameterDescriptionByName(nameParam, out ParametrDiscription);
-        poverhnostID = ParametrDiscription.id;
-    }
+
+
+
     private void Update()
     {
         float horizontal = Input.GetAxis("Horizontal");
@@ -66,7 +61,9 @@ public class Player_Muvoment : MonoBehaviour
         }
         if (horizontal != 0 || vertical != 0)
         {
-            RuntimeManager.StudioSystem.setParameterByIDWithLabel(poverhnostID, AG.texture);
+            AG.PlaySteps();
+         
+
         }
         Func(horizontal, vertical);//anim
         jspeed += graviry * Time.deltaTime * 3f;

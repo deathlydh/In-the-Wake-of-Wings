@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.033773154, g: 0.02802797, b: 0.017244238, a: 1}
+  m_IndirectSpecularColor: {r: 0.033988327, g: 0.02802058, b: 0.017336862, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4652,6 +4652,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 401363102436522811, guid: b20385bd8beafa243a9483d40306fa66, type: 3}
+      propertyPath: AG
+      value: 
+      objectReference: {fileID: 1641764555}
     - target: {fileID: 3664722829515309227, guid: b20385bd8beafa243a9483d40306fa66, type: 3}
       propertyPath: txt
       value: 
@@ -4713,6 +4717,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 308564352672518505, guid: b20385bd8beafa243a9483d40306fa66, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1641764544}
+    - targetCorrespondingSourceObject: {fileID: 308564352672518505, guid: b20385bd8beafa243a9483d40306fa66, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1641764555}
     - targetCorrespondingSourceObject: {fileID: 6462766612040435208, guid: b20385bd8beafa243a9483d40306fa66, type: 3}
       insertIndex: -1
       addedObject: {fileID: 760727378}
@@ -8563,6 +8570,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84ddbb333f159424fbb79225546a51d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1641764555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 384522094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d8b523aa5e3c1447bdaed872d902487, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stepsEventReference:
+    Guid:
+      Data1: 712048057
+      Data2: 1336582132
+      Data3: 2024386214
+      Data4: 155199376
+    Path: event:/Player/Steps
 --- !u!1 &1651443672
 GameObject:
   m_ObjectHideFlags: 0

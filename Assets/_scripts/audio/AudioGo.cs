@@ -1,11 +1,25 @@
+using System;
 using UnityEngine;
+using FMOD.Studio;
+using FMODUnity;
 
 public class AudioGo : MonoBehaviour
 {
 
+    private PARAMETER_DESCRIPTION ParametrDiscription;
+    private PARAMETER_ID poverhnostID;
+
     private string str;
+    [SerializeField] private EventReference _stepsEventReference;
+
     public string texture => str;
 
+    private void Start()
+    {
+        const string nameParam = "Poverhnost";
+        RuntimeManager.StudioSystem.getParameterDescriptionByName(nameParam, out ParametrDiscription);
+        poverhnostID = ParametrDiscription.id;
+    }
 
     void Update()
     {
@@ -54,6 +68,14 @@ public class AudioGo : MonoBehaviour
     {
         str = renderer.material.GetTexture("_MainTex").name;
     }
+
+    internal void PlaySteps()
+    {
+        Debug.Log($"Audio Go: texture is {texture}");
+        RuntimeManager.StudioSystem.setParameterByIDWithLabel(poverhnostID, texture);
+        RuntimeManager.PlayOneShot(_stepsEventReference, gameObject.transform.position);
+    }
+
 
 }
 
