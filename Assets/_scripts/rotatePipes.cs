@@ -21,10 +21,7 @@ public class rotatePipes : MonoBehaviour
     {
         
     }
-    public void rotatePipe(int id)
-    {
-        pipes[id].Rotate(0, 0, -90);
-    }
+
     public void rotatePipes3d(GameObject obj)
     {
         obj.transform.Rotate(0, 0, -90);
