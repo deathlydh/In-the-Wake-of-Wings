@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.033988327, g: 0.02802058, b: 0.017336862, a: 1}
+  m_IndirectSpecularColor: {r: 0.033773154, g: 0.02802797, b: 0.017244238, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4402,6 +4402,7 @@ GameObject:
   - component: {fileID: 728792249}
   - component: {fileID: 728792248}
   - component: {fileID: 728792247}
+  - component: {fileID: 728792253}
   m_Layer: 0
   m_Name: Cube (8)
   m_TagString: truba
@@ -4549,6 +4550,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &728792253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728792246}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.98824716, b: 0.0141509175, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!114 &736356714 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2263545615596992384, guid: b20385bd8beafa243a9483d40306fa66, type: 3}
@@ -4886,6 +4905,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813546506}
   m_CullTransparentMesh: 1
+--- !u!1 &838826655 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4479193925690914926, guid: 3f8d20161ea87f541a6d99fa11e78096, type: 3}
+  m_PrefabInstance: {fileID: 7483096313564374746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &838826662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838826655}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.98824716, b: 0.0141509175, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &854520471
 GameObject:
   m_ObjectHideFlags: 0
@@ -5882,6 +5924,7 @@ GameObject:
   - component: {fileID: 998304589}
   - component: {fileID: 998304588}
   - component: {fileID: 998304587}
+  - component: {fileID: 998304593}
   m_Layer: 0
   m_Name: Cube (7)
   m_TagString: truba
@@ -6029,6 +6072,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &998304593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998304586}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.98824716, b: 0.0141509175, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1012672757
 GameObject:
   m_ObjectHideFlags: 0
@@ -10980,6 +11041,7 @@ GameObject:
   - component: {fileID: 2131870101}
   - component: {fileID: 2131870100}
   - component: {fileID: 2131870099}
+  - component: {fileID: 2131870103}
   - component: {fileID: 2131870098}
   - component: {fileID: 2131870097}
   m_Layer: 0
@@ -11129,6 +11191,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2131870103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131870096}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.98824716, b: 0.0141509175, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &2134077013
 GameObject:
   m_ObjectHideFlags: 0
@@ -12276,7 +12356,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4479193925690914926, guid: 3f8d20161ea87f541a6d99fa11e78096, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 838826662}
   m_SourcePrefab: {fileID: 100100000, guid: 3f8d20161ea87f541a6d99fa11e78096, type: 3}
 --- !u!1001 &8934178840168876714
 PrefabInstance:
