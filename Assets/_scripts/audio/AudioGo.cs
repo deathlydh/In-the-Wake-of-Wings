@@ -41,17 +41,9 @@ public class AudioGo : MonoBehaviour
         {
             MeshRenderer render = hit.collider.GetComponent<MeshRenderer>();
             Terrain hitTerrain = hit.collider.GetComponent<Terrain>();
-<<<<<<< Updated upstream
-            if (hitTerrain)
-            {
-                SetFootstepTerrainSurface(hitTerrain, hit.point);
-            }
-            else
-=======
 
             Debug.Log($"{render == null}");
                 if(render)
->>>>>>> Stashed changes
             {
                 PlayFootRendererSurface(render);
             }
@@ -91,9 +83,6 @@ public class AudioGo : MonoBehaviour
 
     private void PlayFootRendererSurface(MeshRenderer renderer)
     {
-<<<<<<< Updated upstream
-        _surfaceMaterial = renderer.material.GetTexture("_MainTex").name;
-=======
         if( renderer.materials == null || renderer.materials.Length == 0 )
         {
             return;
@@ -105,9 +94,8 @@ public class AudioGo : MonoBehaviour
             _surfaceMaterial = "Wood";
         }
 
-
+            
         Debug.Log($"Audio Go: surface texture is {  _surfaceMaterial}");
->>>>>>> Stashed changes
     }
 
     private void PlaySteps()
