@@ -9,7 +9,13 @@ public class Dialog : MonoBehaviour
     //public bool flag = false;
     public float timescale = 1f;
     public TextMeshProUGUI txt;
-private bool flag;
+    private bool flag;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Player")
+        FuncSub();
+    }
     public void FuncSub()
     {
 	if (!flag)
