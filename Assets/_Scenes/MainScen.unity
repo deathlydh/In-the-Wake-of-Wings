@@ -740,6 +740,26 @@ PrefabInstance:
       propertyPath: curPath
       value: 
       objectReference: {fileID: 1958416546}
+    - target: {fileID: 1291658199034994282, guid: 6aaa911a5b5a22243a0327a0035c6260, type: 3}
+      propertyPath: waitEvent.Path
+      value: event:/Butterfly/Vaiting
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291658199034994282, guid: 6aaa911a5b5a22243a0327a0035c6260, type: 3}
+      propertyPath: waitEvent.Guid.Data1
+      value: 1466862090
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291658199034994282, guid: 6aaa911a5b5a22243a0327a0035c6260, type: 3}
+      propertyPath: waitEvent.Guid.Data2
+      value: 1272414859
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291658199034994282, guid: 6aaa911a5b5a22243a0327a0035c6260, type: 3}
+      propertyPath: waitEvent.Guid.Data3
+      value: 1430792595
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291658199034994282, guid: 6aaa911a5b5a22243a0327a0035c6260, type: 3}
+      propertyPath: waitEvent.Guid.Data4
+      value: 729661595
+      objectReference: {fileID: 0}
     - target: {fileID: 2468243963937737693, guid: 6aaa911a5b5a22243a0327a0035c6260, type: 3}
       propertyPath: camX
       value: 
@@ -8870,11 +8890,11 @@ MonoBehaviour:
     Path: event:/Objects/Valve
   pipeRotateSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1380420342
+      Data2: 1171150702
+      Data3: 1975920312
+      Data4: 1707001151
+    Path: event:/Objects/Pipe_Rotate
   grabSound:
     Guid:
       Data1: -1525196982
