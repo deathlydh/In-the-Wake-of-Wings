@@ -11,12 +11,19 @@ public class SunController : MonoBehaviour
     private float initialTimeOfDay; // Исходное значение времени суток
     private float startTime; // Время начала перехода
     private bool isTransitioning; // Флаг перехода
-    public float targetLightAngleX;    public float targetLightAngleY;    public float targetLightAngleZ;
+    private bool flag;
+    private float initialLightAngleX;
+    public float targetLightAngleX;    public float targetLightAngleY;     float targetLightAngleZ;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            StartTransition(); // Запускаем плавную смену времени суток
+            if(!flag)
+            {
+                StartTransition();
+                flag = true;
+            } // Запускаем плавную смену времени суток
+            //Destroy(this.gameObject);
         }
     }
 
@@ -25,7 +32,6 @@ public class SunController : MonoBehaviour
         float elapsedTime = 0f;
 
         // Устанавливаем начальное значение угла X у Transform света
-        float initialLightAngleX = lightTransform.rotation.eulerAngles.x;
 
         while (elapsedTime < transitionSpeed)
         {
@@ -39,7 +45,7 @@ public class SunController : MonoBehaviour
             float delta_tr = Mathf.Lerp(initialLightAngleX, targetLightAngleX, t);
             float delta_trY = Mathf.Lerp(initialLightAngleY, targetLightAngleY, t);
             float delta_trZ = Mathf.Lerp(initialLightAngleZ, targetLightAngleZ, t);
-            Quaternion newRotation = Quaternion.Euler(delta_tr, delta_trY, delta_trZ);
+            Quaternion newRotation = Quaternion.Euler(delta_tr, delta_trY, lightTransform.rotation.eulerAngles.z);
             lightTransform.rotation = newRotation;
 
             elapsedTime += Time.deltaTime;
@@ -55,6 +61,9 @@ public class SunController : MonoBehaviour
     {
         // Получаем текущий угол Y для света
         initialLightAngleY = lightTransform.rotation.eulerAngles.y;
+        initialLightAngleZ = lightTransform.rotation.eulerAngles.z;
+        initialLightAngleX = lightTransform.rotation.eulerAngles.x;
+
         initialTimeOfDay = RenderSettings.sun.intensity;
         startTime = Time.time;
         isTransitioning = true;

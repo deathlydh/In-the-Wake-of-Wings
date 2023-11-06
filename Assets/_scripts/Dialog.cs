@@ -8,12 +8,15 @@ public class Dialog : MonoBehaviour
     public float time = 0.5f;
     //public bool flag = false;
     public float timescale = 1f;
-    TextMeshProUGUI txt;
-    public void Awake()
+    public TextMeshProUGUI txt;
+private bool flag;
+    public void FuncSub()
     {
-        txt = GetComponent<TextMeshProUGUI>();
-
-        StartCoroutine(c_Text());
+	if (!flag)
+	{
+	StartCoroutine(c_Text());
+    	flag = true;
+	}
     }
     IEnumerator c_Text()
     {
