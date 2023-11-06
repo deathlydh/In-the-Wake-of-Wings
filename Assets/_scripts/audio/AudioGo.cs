@@ -45,7 +45,7 @@ public class AudioGo : MonoBehaviour
             {
                 SetFootstepTerrainSurface(hitTerrain, hit.point);
             }
-            else if(render)
+            else
             {
                 PlayFootRendererSurface(render);
             }
@@ -80,11 +80,7 @@ public class AudioGo : MonoBehaviour
 
     private void PlayFootRendererSurface(Renderer renderer)
     {
-        if(renderer == null|| renderer.material == null)
-        {
-            return;
-        }
-        _surfaceMaterial = renderer.material.GetTexture("_MainTex")?.name;
+        _surfaceMaterial = renderer.material.GetTexture("_MainTex").name;
     }
 
     private void PlaySteps()
