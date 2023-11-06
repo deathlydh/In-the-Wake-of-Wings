@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44949442, g: 0.49649101, b: 0.55914664, a: 1}
+  m_IndirectSpecularColor: {r: 0.44949418, g: 0.4964906, b: 0.559146, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -799,6 +799,14 @@ PrefabInstance:
     - target: {fileID: 2484754221920387267, guid: 6aaa911a5b5a22243a0327a0035c6260, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2826768566948866379, guid: 6aaa911a5b5a22243a0327a0035c6260, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2826768566948866379, guid: 6aaa911a5b5a22243a0327a0035c6260, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5783141461856176884, guid: 6aaa911a5b5a22243a0327a0035c6260, type: 3}
       propertyPath: m_Name
@@ -8841,25 +8849,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btnClickSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 2059462562
+      Data2: 1319440854
+      Data3: 1015255444
+      Data4: -111600248
+    Path: event:/UI/Buttons
   doorOpenSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1342739865
+      Data2: 1099248513
+      Data3: 236341380
+      Data4: -1181231528
+    Path: event:/Objects/Door
   valveSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 674187426
+      Data2: 1307636858
+      Data3: 1645750919
+      Data4: -1190476895
+    Path: event:/Objects/Valve
   pipeRotateSound:
     Guid:
       Data1: 0
@@ -8869,11 +8877,11 @@ MonoBehaviour:
     Path: 
   grabSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1525196982
+      Data2: 1326378817
+      Data3: 1602509753
+      Data4: -543588761
+    Path: event:/Player/Grab
 --- !u!1 &1178845028
 GameObject:
   m_ObjectHideFlags: 0

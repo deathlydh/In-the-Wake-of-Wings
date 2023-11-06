@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44949418, g: 0.4964906, b: 0.559146, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8791,7 +8791,7 @@ MonoBehaviour:
       Data2: 1099248513
       Data3: 236341380
       Data4: -1181231528
-    Path: event:/Door
+    Path: event:/Objects/Door
   valveSound:
     Guid:
       Data1: 0
