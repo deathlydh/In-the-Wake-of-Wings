@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Mause_Luck : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class Mause_Luck : MonoBehaviour
             body.freezeRotation = true;
 
         _animator = GetComponent<Animator>();
-        Cursor.lockState = CursorLockMode.Locked; 
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
@@ -81,4 +82,17 @@ public class Mause_Luck : MonoBehaviour
     {
         isMoving = new_state;
     }
+    // Метод для изменения переменных через слайдер в UI
+    // Методы для изменения переменных через слайдеры в UI
+    public void SetRotationSpeedHor(float newSpeed)
+    {
+        _rotationSpeedHor = newSpeed;
+    }
+
+    public void SetRotationSpeedVer(float newSpeed)
+    {
+        _rotationSpeedVer = newSpeed;
+    }
+
 }
+
