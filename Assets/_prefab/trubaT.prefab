@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8440782492137747274}
   - component: {fileID: 8456034606761466871}
   - component: {fileID: 2941141929826324979}
+  - component: {fileID: -6005822407055420810}
   - component: {fileID: -1059474809487867812}
   - component: {fileID: 414333207038666234}
-  - component: {fileID: -6005822407055420810}
   m_Layer: 0
   m_Name: trubaT
   m_TagString: Untagged
@@ -109,6 +109,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-6005822407055420810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394904131150372653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73e0cde8a7be0e46911ee8892b99877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actions:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &-1059474809487867812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,21 +169,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-6005822407055420810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394904131150372653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e73e0cde8a7be0e46911ee8892b99877, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actions:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &2475027921543185815
 GameObject:
   m_ObjectHideFlags: 0

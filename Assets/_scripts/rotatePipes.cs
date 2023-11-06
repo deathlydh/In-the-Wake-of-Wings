@@ -29,7 +29,7 @@ public class rotatePipes : MonoBehaviour
     }
     private void checkPipes()
     {
-        if (pipes[0].eulerAngles.z == 180 & pipes[1].eulerAngles.z == 180 & pipes[2].eulerAngles.z == 180 & pipes[3].eulerAngles.z == 180)
+        if (pipes[0].eulerAngles.z == 270  & pipes[1].eulerAngles.z == 90 & (pipes[2].eulerAngles.z == 0 | pipes[2].eulerAngles.z == 180) & pipes[3].eulerAngles.z == 0 & (pipes[4].eulerAngles.z == 90 | pipes[4].eulerAngles.z == 270) & pipes[5].eulerAngles.z == 180 & (pipes[6].eulerAngles.z == 180 | pipes[6].eulerAngles.z == 0) & pipes[7].eulerAngles.z == 270 & pipes[8].eulerAngles.z == 90)
         {
             go.Invoke();
         }

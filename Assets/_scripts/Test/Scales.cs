@@ -33,9 +33,10 @@ public class Scales : MonoBehaviour
     private void CheckEquals()
     {
         
-        o = (_planeRigt.BodyMass - _planeLeft.BodyMass) / _planeLeft.BodyMass + _planeRigt.BodyMass;
+        //o = (_planeRigt.BodyMass - _planeLeft.BodyMass) / _planeLeft.BodyMass + _planeRigt.BodyMass;
        if (_planeLeft.BodyMass == _planeRigt.BodyMass)// && _planeRigt.BodyMass == equalityMass)
        {
+            o = 0;
             anim.SetFloat("Blend", 0);
             //Debug.Log("=)))");
             go.Invoke();
@@ -47,10 +48,13 @@ public class Scales : MonoBehaviour
             {
                 if (_planeRigt.BodyMass > 0)
                 {
-                    anim.SetFloat("Blend", -(_planeRigt.BodyMass / _planeLeft.BodyMass));
+                    o = -((_planeLeft.BodyMass-_planeRigt.BodyMass) / _planeLeft.BodyMass);
+                    anim.SetFloat("Blend", -((_planeLeft.BodyMass - _planeRigt.BodyMass) / _planeLeft.BodyMass));
                 } 
                 else
                 {
+
+                    o = -1;
                     anim.SetFloat("Blend", -1);
                 }
             }
@@ -58,10 +62,12 @@ public class Scales : MonoBehaviour
             {
                 if (_planeLeft.BodyMass > 0)
                 {
-                    anim.SetFloat("Blend", (_planeLeft.BodyMass / _planeRigt.BodyMass));
+                    o = ((_planeRigt.BodyMass-_planeLeft.BodyMass) / _planeRigt.BodyMass);
+                    anim.SetFloat("Blend", ((_planeRigt.BodyMass - _planeLeft.BodyMass) / _planeRigt.BodyMass));
                 }
                 else
                 {
+                    o = 1;
                     anim.SetFloat("Blend", 1);
                 }
             }

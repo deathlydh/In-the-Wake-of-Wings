@@ -44,9 +44,10 @@ GameObject:
   - component: {fileID: 4505833991528994428}
   - component: {fileID: 5596363837125084180}
   - component: {fileID: 5776175300650397722}
+  - component: {fileID: 6890170491366143266}
   - component: {fileID: 8389765322079668526}
   - component: {fileID: -4690164013955664480}
-  - component: {fileID: 6890170491366143266}
+  - component: {fileID: 127468190707030568}
   m_Layer: 0
   m_Name: truba_pryamaya
   m_TagString: Untagged
@@ -141,6 +142,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6890170491366143266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7473640742813646470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73e0cde8a7be0e46911ee8892b99877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actions:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8389765322079668526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,21 +202,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6890170491366143266
-MonoBehaviour:
+--- !u!205 &127468190707030568
+LODGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7473640742813646470}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1.0000025
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.024236333
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 5596363837125084180}
+    - renderer: {fileID: 4658451233362535454}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e73e0cde8a7be0e46911ee8892b99877, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  actions:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1001 &6298197315348822170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -258,6 +279,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7b28f56b6f9e4e48952e253454e9934, type: 3}
+--- !u!23 &4658451233362535454 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: d7b28f56b6f9e4e48952e253454e9934, type: 3}
+  m_PrefabInstance: {fileID: 6298197315348822170}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5831326351190269809 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d7b28f56b6f9e4e48952e253454e9934, type: 3}
