@@ -40,7 +40,7 @@ public class baturflyeAI : MonoBehaviour
         if (dist < distace & distPath > 1)
         {
             anim.SetBool("wait", false);
-            RuntimeManager.PlayOneShot(goEvent, this.gameObject.transform.position);
+            //RuntimeManager.PlayOneShot(goEvent, this.gameObject.transform.position);
             transform.position += (curPath.transform.position - transform.position).normalized * speed * Time.deltaTime;
             transform.LookAt(curPath.transform.position, Vector3.up);
 
@@ -69,7 +69,7 @@ public class baturflyeAI : MonoBehaviour
                  if (dist > distace)
                  {
                      anim.SetBool("wait", true);
-                     RuntimeManager.PlayOneShotAttached(waitEvent, this.gameObject);
+                    // RuntimeManager.PlayOneShotAttached(waitEvent, this.gameObject);
                 }
             }
         }
