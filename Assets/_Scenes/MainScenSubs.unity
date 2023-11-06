@@ -1387,7 +1387,6 @@ GameObject:
   - component: {fileID: 147339749}
   - component: {fileID: 147339747}
   - component: {fileID: 147339746}
-  - component: {fileID: 147339745}
   m_Layer: 0
   m_Name: sub7 borehole
   m_TagString: Untagged
@@ -1410,37 +1409,6 @@ Transform:
   m_Father: {fileID: 1848317632}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &147339745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147339743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f29d03200ab07e940aef37943197a74a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 147339746}
-        m_TargetAssemblyTypeName: Dialog, Assembly-CSharp
-        m_MethodName: FuncSub
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  sbor: {fileID: 0}
-  valvecol:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &147339746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1456,7 +1424,7 @@ MonoBehaviour:
   output:
   - "-\u041D\u0430\u0434\u0435\u044E\u0441\u044C \u0432 \u0441\u043A\u0432\u0430\u0436\u0438\u043D\u0435
     \u0435\u0449\u0435 \u0435\u0441\u0442\u044C \u0432\u043E\u0434\u0430."
-  time: 0.1
+  time: 0.05
   timescale: 1
   txt: {fileID: 811742402}
 --- !u!65 &147339747
@@ -1698,7 +1666,6 @@ GameObject:
   - component: {fileID: 173031127}
   - component: {fileID: 173031126}
   - component: {fileID: 173031125}
-  - component: {fileID: 173031124}
   m_Layer: 0
   m_Name: sub2
   m_TagString: Untagged
@@ -1721,37 +1688,6 @@ Transform:
   m_Father: {fileID: 1848317632}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &173031124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 173031122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f29d03200ab07e940aef37943197a74a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 173031125}
-        m_TargetAssemblyTypeName: Dialog, Assembly-CSharp
-        m_MethodName: FuncSub
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  sbor: {fileID: 0}
-  valvecol:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &173031125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1766,7 +1702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   output:
   - "\u0422\u044B \u043A\u0443\u0434\u0430?"
-  time: 0.1
+  time: 0.05
   timescale: 1
   txt: {fileID: 811742402}
 --- !u!65 &173031126
@@ -7025,7 +6961,6 @@ GameObject:
   - component: {fileID: 910720130}
   - component: {fileID: 910720128}
   - component: {fileID: 910720127}
-  - component: {fileID: 910720126}
   m_Layer: 0
   m_Name: sub3 - at the hibra
   m_TagString: Untagged
@@ -7048,37 +6983,6 @@ Transform:
   m_Father: {fileID: 1848317632}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: -39.75, z: 0}
---- !u!114 &910720126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 910720124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f29d03200ab07e940aef37943197a74a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 910720127}
-        m_TargetAssemblyTypeName: Dialog, Assembly-CSharp
-        m_MethodName: FuncSub
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  sbor: {fileID: 0}
-  valvecol:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &910720127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7097,7 +7001,7 @@ MonoBehaviour:
     \u044F \u043F\u043E\u043C\u043D\u044E, \u0447\u0442\u043E \u043C\u043E\u0436\u043D\u043E
     \u0432\u0435\u0440\u043D\u0443\u0442\u044C\u0441\u044F \u0447\u0435\u0440\u0435\u0437
     \u043C\u043E\u0441\u0442."
-  time: 0.1
+  time: 0.05
   timescale: 1
   txt: {fileID: 811742402}
 --- !u!65 &910720128
@@ -8420,7 +8324,6 @@ GameObject:
   - component: {fileID: 1054886045}
   - component: {fileID: 1054886043}
   - component: {fileID: 1054886042}
-  - component: {fileID: 1054886041}
   m_Layer: 0
   m_Name: sub6 in qwest 2
   m_TagString: Untagged
@@ -8443,37 +8346,6 @@ Transform:
   m_Father: {fileID: 1848317632}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: -29.314, z: 0}
---- !u!114 &1054886041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1054886039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f29d03200ab07e940aef37943197a74a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1054886042}
-        m_TargetAssemblyTypeName: Dialog, Assembly-CSharp
-        m_MethodName: FuncSub
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  sbor: {fileID: 0}
-  valvecol:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1054886042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8496,7 +8368,7 @@ MonoBehaviour:
     \u043E\u0431\u0432\u0430\u043B\u0438\u043B\u0430\u0441\u044C \u0438 \u0432\u0440\u0435\u043C\u044F
     \u0437\u0434\u0435\u0441\u044C \u0431\u0443\u0434\u0442\u043E \u043E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u043B\u043E\u0441\u044C
     \u043F\u043E\u0441\u043B\u0435 \u0443\u0445\u043E\u0434\u0430 \u043B\u044E\u0434\u0435\u0439.\r\n"
-  time: 0.1
+  time: 0.05
   timescale: 1
   txt: {fileID: 811742402}
 --- !u!65 &1054886043
@@ -8905,7 +8777,6 @@ GameObject:
   - component: {fileID: 1178845033}
   - component: {fileID: 1178845032}
   - component: {fileID: 1178845031}
-  - component: {fileID: 1178845030}
   m_Layer: 0
   m_Name: sub1
   m_TagString: Untagged
@@ -8928,37 +8799,6 @@ Transform:
   m_Father: {fileID: 1848317632}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1178845030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1178845028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f29d03200ab07e940aef37943197a74a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1178845031}
-        m_TargetAssemblyTypeName: Dialog, Assembly-CSharp
-        m_MethodName: FuncSub
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  sbor: {fileID: 0}
-  valvecol:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1178845031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8979,7 +8819,7 @@ MonoBehaviour:
     \u0441\u0442\u0430\u043B\u0430 \u043C\u043D\u0435 \u043B\u0443\u0447\u0448\u0438\u043C
     \u0434\u0440\u0443\u0433\u043E\u043C, \u044F \u043D\u0430\u0437\u0432\u0430\u043B
     \u0435\u0435 \u041B\u0438\u0437\u0430!"
-  time: 0.1
+  time: 0.05
   timescale: 1
   txt: {fileID: 811742402}
 --- !u!65 &1178845032
@@ -11717,7 +11557,6 @@ GameObject:
   - component: {fileID: 1463216791}
   - component: {fileID: 1463216790}
   - component: {fileID: 1463216789}
-  - component: {fileID: 1463216788}
   m_Layer: 0
   m_Name: sub8
   m_TagString: Untagged
@@ -11740,37 +11579,6 @@ Transform:
   m_Father: {fileID: 1848317632}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1463216788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1463216786}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f29d03200ab07e940aef37943197a74a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1463216789}
-        m_TargetAssemblyTypeName: Dialog, Assembly-CSharp
-        m_MethodName: FuncSub
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  sbor: {fileID: 0}
-  valvecol:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1463216789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11795,7 +11603,7 @@ MonoBehaviour:
     \u0434\u043D\u0435\u0439 \u0432 \u0442\u0432\u043E\u0435\u0439 \u0436\u0438\u0437\u043D\u0438,
     \u0430 \u0441\u043A\u043E\u043B\u044C\u043A\u043E \u0436\u0438\u0437\u043D\u0438
     \u0432 \u0442\u0432\u043E\u0438\u0445 \u0434\u043D\u044F\u0445."
-  time: 0.1
+  time: 0.05
   timescale: 1
   txt: {fileID: 811742402}
 --- !u!65 &1463216790
@@ -13003,7 +12811,6 @@ GameObject:
   - component: {fileID: 1591887785}
   - component: {fileID: 1591887783}
   - component: {fileID: 1591887782}
-  - component: {fileID: 1591887781}
   m_Layer: 0
   m_Name: sub5 in hibara
   m_TagString: Untagged
@@ -13026,37 +12833,6 @@ Transform:
   m_Father: {fileID: 1848317632}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1591887781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1591887779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f29d03200ab07e940aef37943197a74a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1591887782}
-        m_TargetAssemblyTypeName: Dialog, Assembly-CSharp
-        m_MethodName: FuncSub
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  sbor: {fileID: 0}
-  valvecol:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1591887782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13073,7 +12849,7 @@ MonoBehaviour:
   - "\u0417\u0430\u0431\u0440\u043E\u0448\u0435\u043D\u043D\u0430\u044F \u043A\u043B\u0430\u0434\u043E\u0432\u043A\u0430
     \u0448\u0430\u0445\u0442\u0435\u0440\u043E\u0432, \u043C\u043E\u0436\u0435\u0442
     \u0437\u0434\u0435\u0441\u044C \u0447\u0442\u043E-\u0442\u043E \u043E\u0441\u0442\u0430\u043B\u043E\u0441\u044C?"
-  time: 0.1
+  time: 0.05
   timescale: 1
   txt: {fileID: 811742402}
 --- !u!65 &1591887783
@@ -17433,7 +17209,6 @@ GameObject:
   - component: {fileID: 2131207304}
   - component: {fileID: 2131207302}
   - component: {fileID: 2131207301}
-  - component: {fileID: 2131207300}
   m_Layer: 0
   m_Name: 'sub4 at brige '
   m_TagString: Untagged
@@ -17456,37 +17231,6 @@ Transform:
   m_Father: {fileID: 1848317632}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 35.307, z: 0}
---- !u!114 &2131207300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2131207298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f29d03200ab07e940aef37943197a74a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  go:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2131207301}
-        m_TargetAssemblyTypeName: Dialog, Assembly-CSharp
-        m_MethodName: FuncSub
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  sbor: {fileID: 0}
-  valvecol:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &2131207301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17502,7 +17246,7 @@ MonoBehaviour:
   output:
   - "\u0417\u0434\u0435\u0441\u044C \u044F\u0432\u043D\u043E \u043D\u0435 \u0445\u0432\u0430\u0442\u0430\u0435\u0442
     \u0434\u0435\u0442\u0430\u043B\u0438."
-  time: 0.1
+  time: 0.05
   timescale: 1
   txt: {fileID: 811742402}
 --- !u!65 &2131207302
