@@ -9,7 +9,9 @@ public class podbor : MonoBehaviour
     [SerializeField] private LayerMask Mask;
     private Camera cam;
     [SerializeField] private Text txt;
+    [SerializeField]
     private Outline ol = null;
+    private Outline olOld = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +21,6 @@ public class podbor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
         RaycastHit hit;
 
@@ -33,7 +34,12 @@ public class podbor : MonoBehaviour
                 }
                 if (hit.collider.GetComponent<Outline>())
                 {
+                    olOld = ol;
                    ol = hit.collider.GetComponent<Outline>();
+                    if (ol != olOld)
+                    {
+                        olOld.enabled = false;
+                    }
                     ol.enabled = true;
                 }
                 txt.text = "ֽאזלטעו F";

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameMenue : MonoBehaviour
 {
@@ -39,7 +40,7 @@ public class GameMenue : MonoBehaviour
     }
    public void GoToScene()
     {
-
+        SceneManager.LoadScene("Main_Manu");
     }
     public void cursorEnabled(bool isEnable)
     {
