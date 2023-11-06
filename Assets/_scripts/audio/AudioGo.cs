@@ -39,17 +39,29 @@ public class AudioGo : MonoBehaviour
     
         if (Physics.Raycast(ray, out var hit))
         {
-            Renderer render = hit.collider.GetComponent<Renderer>();
+            MeshRenderer render = hit.collider.GetComponent<MeshRenderer>();
             Terrain hitTerrain = hit.collider.GetComponent<Terrain>();
+<<<<<<< Updated upstream
             if (hitTerrain)
             {
                 SetFootstepTerrainSurface(hitTerrain, hit.point);
             }
             else
+=======
+
+            Debug.Log($"{render == null}");
+                if(render)
+>>>>>>> Stashed changes
             {
                 PlayFootRendererSurface(render);
             }
+            else if(hitTerrain)
+            {
+                SetFootstepTerrainSurface(hitTerrain, hit.point);
+            }
+              RuntimeManager.StudioSystem.setParameterByIDWithLabel(_poverhnostID, _surfaceMaterial);
         }
+
     }
 
     private void SetFootstepTerrainSurface(Terrain terrain, Vector3 HitPoint)
@@ -74,13 +86,28 @@ public class AudioGo : MonoBehaviour
         }
 
         _surfaceMaterial = terrain.terrainData.terrainLayers[primeryIndex].name;
-        //Debug.Log($"Audio Go: surface texture is {_surfaceMaterial}");
-        RuntimeManager.StudioSystem.setParameterByIDWithLabel(_poverhnostID, _surfaceMaterial);
+   
     }
 
-    private void PlayFootRendererSurface(Renderer renderer)
+    private void PlayFootRendererSurface(MeshRenderer renderer)
     {
+<<<<<<< Updated upstream
         _surfaceMaterial = renderer.material.GetTexture("_MainTex").name;
+=======
+        if( renderer.materials == null || renderer.materials.Length == 0 )
+        {
+            return;
+        }
+      
+        _surfaceMaterial = renderer.materials[0].name;
+        if(_surfaceMaterial == "Wood (Instance)")
+        {
+            _surfaceMaterial = "Wood";
+        }
+
+
+        Debug.Log($"Audio Go: surface texture is {  _surfaceMaterial}");
+>>>>>>> Stashed changes
     }
 
     private void PlaySteps()
